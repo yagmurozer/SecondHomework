@@ -1,5 +1,4 @@
-﻿
-//1-
+﻿//1-
 Console.Write("Rakamları toplanacak sayıyı giriniz:");
 string num = Console.ReadLine();
 int sum = 0;
