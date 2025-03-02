@@ -75,7 +75,6 @@ foreach (var selectedChar in charList)
 
 
 
-
 //5
 String[] wordsarr = new String[] { "car", "glass", "flower", "cat", "array", "comfortable" };
 
@@ -165,6 +164,7 @@ foreach (var word in arr)
 
 
 //8
+Console.Write("Lütfen kelime giriniz:");
 List<String> words = new List<String>();
 
 while (true)
@@ -222,25 +222,23 @@ foreach (var number in numbers)
 Console.WriteLine($"\nSayilerin Ortalaması: {average}");
 
 
-
-
-
 //10
 List<int> numbers = new List<int>  { 1, 20, 5, 9, 10, 7, 13, 24, 15, 2, 0, 3, 70, 30 };
 
 numbers.RemoveAll(number => number < 10);
+Console.WriteLine("Güncellenmiş liste:");
 Console.WriteLine(string.Join(", ", numbers));
 
 
 //11
 List<int> grades = new List<int> { 1, 20, 5, 9, 10, 7, 13, 24, 15, 2, 0, 3, 70, 30, 80, 90, 99, 6, 49};
 
-for (int i = 0; i < grades.Count; i++)
+foreach (var grade in grades)
 {
-    if (grades[i] < 50)
-    {
-        grades[i] = 50;
-    }
-
+    Console.Write(grade + " ");
 }
+
+Console.WriteLine("Güncellenmiş liste:");
+List<int> updatedGrades = grades.Select(g => g < 50 ? 50 : g).ToList();
+Console.WriteLine(string.Join(", ", updatedGrades));
 
